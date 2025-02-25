@@ -154,7 +154,6 @@ export const update = async (req, res) => {
     const { name, profilePic } = req.body;
 
     try {
-        console.log(req.body);
         const currentUser = await User.findById(req.user._id);
 
         if (name) currentUser.name = name;
